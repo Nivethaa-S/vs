@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus booking webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    *{
+        margin:0;
+        padding:0;
+        font-family:sans-serif;
+    }
+body{
+    background:white;
+}
+    
+    .page-width{
+    width:1180px;
+        margin:auto;
+        max-width:80%;
+    
+    }
+    .hero-section-wrapper{
+        display:flex;
+        flex-direction:column;
+        padding:25px;
+ }
+ .hero-section-wrapper nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+ }
+  .logo-section img {
+width:100px ;
+height:100px;
+
+ }
+ .hero-section-wrapper nav ul{
+    display:flex;
+    gap:50px;
+    list-style:none;
+ }
+ .hero-section .hero-section-wrapper nav ul li a{
+    color:black;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:500;
+    cursor:pointer;
+
+ }
+ 
+ .btnstyle{
+    padding: 10px 30px;
+    background:yellow;
+    font-size:18px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+ }
+ .hero-slogon{
+    padding:100px 0;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.hero-slogon h2{
+    font-size:64px;
+    color:black;
+    text-align:center;
+}
+.hero-slogon p{
+font-size:18px;
+text-align:center;
+width:100%;
+margin:20px;
+}
+</style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-section-wrapper page-width">
+            <nav>
+                <div class="logo-section">
+                    <img src="images/logo.jpg"/>
+                </div>
+                <ul>
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> View </a></li>
+                    <li><a href="#"> cancellation </a></li>
+                    <li><a href="#"> Register</a></li>
+                    <li><a href="#"> <button class="btnstyle 1"> Login</button></a></li>
+                </ul>
+            </nav>
+            <div class="hero-slogon">
+                <h2>RED BUS</h2>
+                <p>
+                    Online bus booking provides bus transportation system, a facility to reserved seats,
+    cancellation of seats and different types of enquiry ehich need an instant and quick
+    reservation.it is a web software solution designed to provide customers with a personalized customer's data scheduled routes, and other information.
+                </p>
+                <a href="#"><button class="btnstyle"> get started</button></a>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>

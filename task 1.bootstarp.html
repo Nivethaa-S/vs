@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+  .status {
+    background-color:red;
+    padding:.4rem 0;
+    border-radius:2rem;
+     }
+     .status.cancelled{
+    background-color:#006b21;
+    padding:.4rem 0;
+    border-radius:2rem;
+     }
+     .status.shipped{
+    background-color:rgb(251, 0, 255);
+    padding:.4rem 0;
+    border-radius:2rem;
+     }
+     .status.delivered{
+    background-color:rgb(0, 140, 255);
+    padding:.4rem 0;
+    border-radius:2rem;
+     }
+     .status.pending{
+    background-color:rgb(255, 0, 0);
+    padding:.4rem 0;
+    border-radius:2rem;
+     }
+</style>
+<body>
+
+  <div class="container mt-3">
+    <center><h1 style="font-size:3rem;"> Customer'S Orders</h1> </center>         
+    <table class="table table-bordered table-hover table-striped text-center">
+      <thead class="bg-success">
+        <tr class="table-dark">
+          <th>ID</th>
+          <th>CUSTOMER</th>
+          <th>LOCATION</th>
+          <th>ORDER DATE</th>
+          <th>STATUS</th>
+          <th>AMOUNT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="">
+          <td>1</td>
+          <td>NIVETHA</td>
+          <td>seoul</td>
+          <td>17 dec,2022</td>
+          <td>
+            <p class="status"> Delivered</p>
+          </td>
+          <td>$128.90</td>
+        </tr>
+        <tr class="">
+          <td>2</td>
+          <td>CHITHU</td>
+          <td>paris</td>
+          <td>27 aug,2023</td>
+          <td>
+            <p class="status cancelled"> cancelled</p>
+          </td>
+          <td>$5350.50</td>
+        </tr>
+        <tr class="">
+          <td>3</td>
+          <td>JEEVI</td>
+          <td>tokyo</td>
+          <td>14 mar,2023</td>
+          <td>
+            <p class="status shipped"> shipped</p>
+          </td>
+          <td>$210.40</td>
+        </tr>
+        <tr class="">
+          <td>4</td>
+          <td>ANISHA</td>
+          <td>New delhi</td>
+          <td>25 may,2023</td>
+          <td>
+            <p class="status delivered"> delivered</p>
+          </td>
+          <td>$149.70</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>APSAR</td>
+          <td>Kolkata</td>
+          <td>24 oct,2023</td>
+          <td><p class="status pending"> pending</p>
+          </td>
+          <td>$399.99</td>
+        </tr>
+        <tr class="">
+          <td>6</td>
+          <td>AARA</td>
+          <td>Kathmandu</td>
+          <td>23 Apr,2023</td>
+          <td>
+            <p class="status cancelled"> cancelled</p>
+          </td>
+          <td>$199.23</td>
+        </tr>
+        <tr class="">
+          <td>7</td>
+          <td>Alex</td>
+          <td>Kathmandu</td>
+          <td>23 Apr,2023</td>
+          <td>
+            <p class="status pending"> pending</p>
+          </td>
+          <td>$199.23</td>
+        </tr>
+        <tr class="">
+          <td>8</td>
+          <td>Rohit</td>
+          <td>London</td>
+          <td>13 Apr,2022</td>
+          <td>
+            <p class="status shipped"> shipped</p>
+          </td>
+          <td>$299.23</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  align-item:center;
+  justify-content: center;
+  background-color:blue ;
+}
+.login{
+  margin:auto;
+  width:400px;
+  height:400px;
+  padding:20px;
+  border-radius:12px;
+  background-color:violet;
+  color:black;
+}
+.btn{
+  font-size:22px;
+  margin-left:35px;
+  border:1px solid black;
+  margin-top:25px;
+}
+.form-check-input{
+  margin-top:18px;
+}
+.form-check-label{
+  margin-top:15px;
+}
+
+</style>
+<body>
+  <div class="login">
+    <h3 class="text-center"> Welcome to Bootstrap</h3>
+    <form>
+      <div class="form-group">
+      <label  class="form-label" for="Username"> Username</label>
+      <input class="form-control" type="username">
+      <label class="form-label"  for="email"> Email address</label>
+      <input class="form-control" type="email">
+      <label class="form-label"for="email"> Password</label>
+      <input class="form-control"type="text">
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender">Female
+    <input class="form-check-input" type="checkbox" id="check">
+      <label  class="form-check-label" for="check"> Remember me</label>
+       <input class="btn" type-="submit" value="SIGN IN">    
+       </form>
+       </div>
+ </div>
+  </body>
+</html>

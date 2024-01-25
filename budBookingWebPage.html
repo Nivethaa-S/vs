@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            cursor:pointer;
+        }
+        body{
+            font-family:sans-serif;
+            background-image:url("images/whitebus.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            
+             }
+             .firstpage {
+                
+             }
+        .h1,h2{
+            font-family:sans-serif;
+            font-weight:400;
+         }
+         article a{
+            text-decoration:none;
+        }
+        article li{
+            list-style:none;
+        }
+        article .flex{
+            display:inline-block;
+        }
+        article .flex-space{
+            display:flex;
+            justify-content:space-between;
+        }
+
+        article .button-fp{
+            border:none;
+            background:none;
+            font-weight:bold;
+            color:white;
+    }
+    .primary-btn{
+        padding:15px 40px;
+        background:blue !important;
+        font-weight:bold;
+        color:white;
+    }
+    
+    .container{
+        max-width:85%;
+        margin:auto;
+    }
+    header{
+        height:10vh;
+}
+    header li{
+        display:inline-block;
+        text-transform:uppercase;
+        margin-right:100px;
+        margin:20px;
+        transition:0.3s;
+    }
+header a{
+        color:black; 
+        transition:0.5s;
+     }
+     header a:hover{
+        color:red;
+     }
+     header .img{
+        margin:0px;
+     }
+    .image{
+        width:100%;
+        height:100%;
+    }
+    .img{
+        width:150px;
+        height:100px;
+        border-radius:50%;
+    
+    }
+    header.navlinks span{
+        display:none;
+    }
+    .item{
+   margin-left:500px;
+
+    }
+    h3{
+        margin-left:10%;
+    }
+.input{
+display:flex;
+justify-content:center;
+align-items: center;
+/* border-bottom:2px solid black; */
+color:black;
+font-size:bold;
+padding:5px;
+width:55%;
+border-radius:20px;
+
+}
+label{
+    /* margin-left:60px; */
+    margin: 5px 0px;
+    width: 45%;
+}
+.set{
+    display: flex;
+    margin:10px 3%;
+
+}
+.card{
+    border: 1px solid black;
+    border-radius:5px;
+    box-shadow:2px 1px 10px;
+    padding: 10px;
+    width:450px;
+    height:500px;
+    margin-left:550px;
+    margin-top:3%;
+    margin-bottom: 20px;
+    justify-content: center;
+    background:white;
+    color:black;
+    animation:content 3s ease-in-out;
+}
+@keyframes content{
+    0%{
+        opacity:0;
+        transform:translate x(-50);
+    }
+}
+.btn{
+    width:350px;
+    color:white !important;
+    background-color:red !important;
+    font-size:17px;
+    padding:5px;
+    margin-left:45px; 
+    margin-top:8%;
+    border-radius:6px;
+}
+.btn-1{
+    background-color:white !important;
+    color:blue !important;
+    width:100px !important;
+    margin-left:60px !important;
+
+}
+.btn-2{
+    background-color:white !important;
+    color:blue !important;
+    width:100px !important;
+    margin-left:60px !important;
+
+}
+    
+h2 span{
+color:red;
+margin-left:40px;
+}
+h3 span{
+    color:blue;
+}
+.fa-arrow-right-arrow-left{
+    margin-left:7%;
+}
+.para h2{
+    margin-left:65px;
+}
+.btn1{
+    color:black;
+    border: 2px solid white;
+    background-color:red !important;
+    color:white !important;
+    padding:25px;
+    border-radius:7px;
+    width:33%;
+    font-size:17px;
+    
+}
+.btn2{
+    color:black !important;
+    border:2px solid white !important;
+    border-radius:7px;
+    padding:25px;
+    width:33%;
+    font-size:17px;
+}
+.btn3{
+    color:black !important;
+    border:2px solid white !important;
+    border-radius:7px ;
+    padding:25px;
+    width:33%;
+    font-size:17px;
+}
+
+.button-fp:hover{
+    background-color:#5555ef;
+    color:white;
+    /* height: 111px; */
+}
+.buttons{
+    padding:0 15%;
+    height: 111px;
+    /* margin-left:300px; */
+    display:inline-block;
+    width:100% !important;
+    /* box-shadow: 10px; */
+    margin-top:10px;
+    box-shadow: 5px 1px 10px;
+    border: 1px solid #ceb9b9;
+
+}
+.primary-btn:hover{
+    background:red;
+    color:black;
+}
+h3 span:hover{
+    color: red;
+}
+.buttons .img{
+    width:30px;
+    height:30px;
+}
+.fa-train{
+    font-size:20px;
+
+}
+.fa-car{
+    font-size:20px;
+
+}
+.fa-user{
+    font-size:20px;
+    margin-left:10px;
+    margin:10px;
+}
+
+/* Advertisement style**/
+.flex-container{
+        /* width:600px; */
+        height:300px;
+        border:2px solid white;
+        border-radius:10px;
+        box-shadow:2px 2px 5px black;
+        padding: 2%;
+        background-color: #da474f;
+        transition:3s;
+        }
+        .flex-container:hover{
+            transform:scale(1.1);
+            z-index:2;
+        }
+        .image-ad{
+        float:right;
+        width:250px;
+        height:250px;
+        margin-left:20px;
+        border-radius:10px;
+        margin-top:25px;
+        }
+        .para-ad{
+        font-size:17px;
+        text-align:justify;
+        align-item:center;
+        }
+        .button-ad{
+        border-radius:10px;
+        width:100px;
+        padding:5px;
+        background-color:aqua;
+        color:black;
+        }
+        .flex-item{
+        width:300px;
+        height:300px;
+        border:2px solid white;
+        margin:40px;
+        box-shadow:1px 1px 5px black;
+        }
+        .card-ad{
+        display:flex;
+        /* margin:50px; */
+        transition:3s;
+        }
+        .card-ad:hover{
+            transform:scale(1.1);
+            z-index:1;
+        }
+        .img-deg{
+        border-radius:10px;
+        }
+        .add{
+            display:flex;
+            text-transform: uppercase;
+            gap:80%;
+
+        }
+        .button-ad{
+            margin:10px;
+            border:none;
+        }
+        .button-ad:hover{
+            background-color: yellow;
+            color:black;
+        }
+        .btn1-ad{
+            background-color:red;
+            color:white;
+
+        }
+        .btn2-ad{
+            background-color:red;
+            color:white;
+        }
+        .btn3-ad{
+            background-color:red;
+            color:white;
+        }
+        .btn4-ad{
+            background-color:red;
+            color:white;
+        }
+        .red-bus footer{
+            margin:auto;
+        }
+        .customer{
+        display:flex;
+        width:770%;
+        gap:250px;
+        }
+        .book{
+            width:150px;
+            margin-top:80px;
+            background:yellow;
+            color:black;
+        }
+        .footer{
+            width:100%;
+            height:50px;
+            background-color: black;
+            color:white;
+            border-radius:6px;
+            padding:10px;
+         }
+         .copy:hover{
+            color:yellow;
+         }
+         .logo{
+    text-align:center;
+    margin:5px;
+         }
+         .fa-youtube{
+            font-size:20px;
+        }
+        .fa-whatsapp{
+            font-size:20px;
+        }
+        .fa-instagram{
+            font-size:20px;
+        }
+        .fa-twitter{
+            font-size:20px;
+        } 
+        .fa-google-plus-g{
+            font-size:20px;
+        }
+        .last-ad{
+            overflow: hidden;
+        }
+        .last-ad p{
+            
+             position:relative;
+            animation-name:scroll;
+            animation-duration:20s ;
+            z-index:1;
+}
+@keyframes scroll{
+
+0%{
+    transform:translate(0);
+}
+100%{
+    transform:translatex(100%);
+}
+}
+/**/
+
+ </style>
+</head>
+<body>
+    <header>
+        <article name="firstPage" class="firstpage">
+                <div class="content flex-space">
+                    <div class=" logo">
+                        <img class="img" src="images/redbus.jpg"/>
+        </div>     
+                    <div class="navlinks">
+                        
+        
+                        <li><a href="#home">Home </a></li>
+                        <li> <a href="#About">About </a></li>
+                        <li><a href="#Bus">Bus </a> </li>
+                        <li> <a href="#contact">Contact </a></li>
+                        <li> <i class="fa fa-search"> </i></li>
+                        <i class="fa-solid fa-user"></i>
+                        <li> <button class="button-fp primary-btn"> BOOK NOW</button></li>
+                        <span  class="fa fa-bars"></span>
+                        </div>
+                    </div>
+                </header><br></br>
+            <div class="buttons">
+                <button class="button-fp btn1"> <img class="img" src ="images/redbus.jpg"/><br> Book bus tickets</button>
+                <button class="button-fp btn2"> <img class="img" src ="images/car-solid.svg"/><br>Rent cabs,bus & TT</button>
+                <button class="button-fp btn3">  <img class="img" src ="images/train-solid.svg"/></i><br>Book train tickets</button>
+                </div>
+            <div class="item"><br></br>
+                <h1>India's No.1 Online Bus Ticket Booking </h1><br></br>
+            <h3><i><span> 24*7 customer services (call & chat)</span></i></h3>
+            </div>
+                <div class="card">
+                    <div class="para">
+                        <div class="">
+                            <img class="img" src="images/logo.jpg"/>
+                            <hr><br>
+                            <h2> <span>Book Bus Ticket online! </span></h2><br>
+                        </div>
+                    </div>
+                    <article class="form">
+                        <div class="set">
+                            <label> From</label>
+                            <select class="input" name="from" placeholder="Eg:Chennai">
+                                <option>Chennai</option>
+                                <option> Combaitore</option>
+                                <option> Madurai</option>
+                            </select>
+                        </div>
+                        <div class="set">
+                            <label> To</label>
+                            <select class="input" name="to" placeholder="Eg:Madurai">
+                                <option>Banglore</option>
+                                <option> Andhra pradesh</option>
+                                <option> Karnataka</option>
+                            </select>
+                        </div>
+                        <div class="set">
+                            <label> Bus Types</label>
+                            <select class="input" name="busType" placeholder="Select Bus Type">
+                                <option>Sleeper</option>
+                                <option> Non-sleeper</option>
+                                <option> AC</option>
+                            </select>
+                        </div>
+                        <div class="set">
+                            <label>No of Passengers</label>
+                            <select class="input" name="busType" placeholder="Select Bus Type">
+                                <option>1</option>
+                                <option> 2</option>
+                                <option> Morethan 2</option>
+                            </select>
+                        </div>
+                        <div class="set">
+                            <label> Date of Journey</label>
+                            <input type="date" id="date" class="input" format="YYYY-MMM-DD" value="2023-11-02" >
+                        </div>
+                        <button class="button-fp btn-1"> Today </button> <i class="fa-solid fa-arrow-right-arrow-left"></i><button class="button-fp btn-2"> Tommorrow</button>
+                        <button class="button-fp btn"> SEARCH BUSES</button>
+                    </article>
+                </div>
+                <div class="section">
+                    <div class="add">
+                    <h2> OFFERS</h2>
+                    <h2> VIEW ALL</h2>
+                    </div>
+                    <button class="button-ad btn1-ad">ALL</button> <button class="button-ad btn2-ad">BUS</button><button class="button-ad btn3-ad">TRAIN</button> <button class="button-ad btn4-ad">CABS</button>
+                </div>
+            </artice>
+        <section name="Advert" style="display: flex;">
+            <div  style="width: 70%;">
+            <div class="flex-container" style="
+            height:300px;
+            border:2px solid white; margin-left:50px;">
+                    <img class="image"style="    float: right;
+                    width: 250px;
+                    height: 250px;
+                    margin-left: 20px;
+                    border-radius: 10px;
+                    margin-top: 25px;" src="images/ad.jpeg"/>
+                    <h1 style="font-size:3rem;"> Apno ko,sapno kareeb laaye </h1>
+                    <p style="color:white;">Online bus booking provides bus transportation system, a facility to reserved seats,
+                        cancellation of seats and different types of enquiry ehich need an instant and quick
+                        reservation.it is a web software solution designed to provide customers with a personalized customer's  data scheduled routes, and other information.</p>
+            </div>
+              
+                <div class="card-ad">
+                    <div class="flex-item" style="width:55%;background-color:black; border-radius:10px; color:blue">
+                        <h2 style="color:yellow;"> Diwali Dazzling Deals !</h2>
+                        <div class="img-deg" style="display: flex;">
+                                <img src="images/travel-ad.jpg" style="width:350px; height:200px; border-radius:10px; margin-left:10px; margin:10px;" >
+                                <span style="color:yellow;">
+                                    <li style="margin:5px 0px">International Trip</li>
+                                    <li style="margin:5px 0px">Vaccation</li>
+                                    <li style="margin:5px 0px">Combo Offer</li>
+                                    <li style="margin:5px 0px">Tourist Guide</li>
+                                    <li style="margin:5px 0px">100% Safe Journey</li>
+                                    <button class="book button-ad"> Book Now</button>
+                                </span>
+                            </div>
+                    </div>
+                    <div class="flex-item" style="background-color:white;color:black; border-radius:10px;">
+                        <div class="img-deg">
+                            <span style="color:red; font-size:25px;"> Happy Journey -Inditales!</span>
+                                <img src="images/train.jpeg" style="width:280px; height:200px; border-radius:10px; margin-left:10px;margin-top:10px;">
+                        </div>
+                        <button class=" button-ad read" style="  margin-left:180px; background-color:red; color:black;"> Book Now </button>
+                    </div>
+                </div>
+                <div class="last-ad"  style=" height: 130px; background-image:url('images/news-bg.jpg');padding:1% 2%;border:5px double white ">
+                    <span style="float: right;
+                    background: red;
+                    border-radius: 24px;
+                    color: white;
+                    padding: 3px 5px;
+                    font-size: 12px;" class="close">X</span>
+                    <p style="font-size: 20px;font-weight: 700;font-family: Verdana, Geneva, Tahoma, sans-serif;"> HINDUSTAN TIMES</p>
+                    <hr>
+                    <p  style="font-size: 14px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Titanic, in full Royal Mail Ship (RMS) Titanic, British luxury passenger liner that sank on April 14–15, 1912, during its maiden voyage, en route to New York City from Southampton, England, killing about 1,500 (see Researcher’s Note: Titanic) passengers and ship personnel.</p>
+                </div>
+            </div>
+            <div class="side-ad" style="width:30%; border:2px solid gray;background-color:blueviolet ;    border: 2px solid gray;
+            background-color: blueviolet;
+            height: 900px;
+            border-radius: 8px;
+            margin: 0 1%;">
+                <div class="side-ad1" style="height: 350px; background-color: white;margin: 3%;padding: 2%;">
+                    <span style="float: right;
+                    background: burlywood;
+                    border-radius: 24px;
+                    padding: 3px 5px;
+                    font-size: 12px;" class="close">X</span>
+                    <h3>SALE ! SALE ! SALE !</h3>
+                    <img width="100%" height="270px" src="images/ad1.png">
+                </div>
+                <div class="side-ad2" style="height: 350px; background-color: white;margin: 3%;padding: 2%;">
+                    <span style="float: right;
+                    background: burlywood;
+                    border-radius: 24px;
+                    padding: 3px 5px;
+                    font-size: 12px;" class="close">X</span>
+                    <h3>ADIPOLI OFFER ! </h3>
+                    <img width="100%" height="270px" src="images/ad2.png">
+                </div>
+                <div class="side-ad3" style="height: 100px; background-color: black;color:white;margin: 3%;padding: 2%;border-radius: 11px;">
+                    <span style="float: right;
+                    background: burlywood;
+                    border-radius: 24px;
+                    padding: 3px 5px;
+                    font-size: 12px;" class="close">X</span>
+                    <!-- <h3 style="text-align: center;">Online ORDERS</h3> -->
+                    <img src="images/small-ad4.jpeg" style="width:70px; height:70px;">
+                    <img src="images/small-ad1.jpg" style="width:70px; height:70px;"> 
+                    <img src="images/small-ad3.jpg" style="width:70px; height:70px;">
+                    <img src="images/small-ad5.jpg" style="width:70px; height:70px;">
+                    <img src="images/small-ad2.jpg" style="width:70px; height:70px;">
+                    <span><img src="images/flipkart-logo.png" style="width: 83px;height: 22px;margin: 0px 1%;"><span style="float:right;margin-top:2px; color:yellow;"> Hurry UP! Midnight Sale Strated...</span>  </span>
+                </div>
+            </div>
+    
+            </div>
+        </section>
+        <section name="red-bus footer">
+    <div class="header">
+        <center><h1 style="font-size:25px;"> REDBUS-STATISTICS</h1> </center>
+        </div>
+        <div class="customer">
+        <p class="para-ad para1">
+            <span style="margin-left:80px;font-size:20px"> CUSTOMS</span> <br> <spann style="margin-left:90px; font-size:2rem;color:red;"> 24M</spann><br> redbus is trusted by over 36 million haoppy customers globally
+            </p>
+            <p class="para-ad para2">
+                <span style="margin-left:50px;font-size:20px;">COACH COMPANIES</span> <br><span style="margin-left:120px;font-size:2rem;color:red;"> 4000</span><br> network of over 4000 bus operators worldwide
+        </p>
+        <p class="para-ad para3">
+            <span style="margin-left:100px;font-size:20px;"> TICKETS</span> <br><span style="margin-left:100px;font-size:2rem;color:red;"> 16+M</span><br>over 16 million booked using redbus
+        </p>
+    </div>
+    <div class="footer">
+        <div class="logo">
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-google-plus-g"></i>
+        </div>
+    <p class="para-ad copy" style="margin-left:1400px; margin-top:10px;"> <ins> @CopyWrite </ins></p>
+    </div>
+        </section>
+    </body>
+    </html>

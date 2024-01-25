@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+</head>
+<body>
+ <h1 style="height:60%; margin-top:200px; margin-left:350px;"> Dark Mode</h1>
+ <div class="custom-checkbox">
+    <input id="status" type="checkbox" name="status">
+    <label for="status">
+        <div class="status-switch" data-unchecked="off" data-checked="on"> </div>
+    </label>
+ </div> 
+ <script>
+    const checkbox = document.getElementById("status");
+    checkbox.addEventListener("change",function() {
+        document.body.classlist.toggle("dark-mode",checkbox.checked);
+    });
+ </script> 
+</body>
+</html>

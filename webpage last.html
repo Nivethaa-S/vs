@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!DOCTYPE html>
+<title> login form Design </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style >
+.fa-facebook
+{
+font-size:10px;
+color:white;
+}
+.fa-google
+{
+font-size:10px;
+color:white;
+}
+*{
+margin:0;
+padding:0;
+}
+body{
+background-image:url("images/home.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+}
+.container{
+top:40%;
+left:50%;
+position:absolute;
+transform:translate(-50%,-50%);
+}
+.card{
+width:300px;
+height:380px;
+border:2px solid white;
+border-radius:50px 5px;
+margin-top:10%;
+padding:30px;
+color:black;
+}
+::placeholder{
+    color:white;
+}
+#name{
+width:200px;
+border:none;
+background:transparent;
+border-bottom:1px solid white;
+color:black;
+padding:6px;
+margin-bottom:20px;
+margin-top:5px;
+margin-left:10px;
+font-size:17px;
+}
+#button{
+border-radius:10px;
+padding:5px;
+background:blue;
+color:white;
+margin-top:20px;
+margin-left:30px;
+width:250px;
+font-size:17px;
+outline:none;
+}
+#button:hover{
+    background-color:yellow;
+    color:black;
+}
+img{
+border-radius:50%;
+position:absolute;
+margin-left:150px;
+margin-top:2px;
+}
+.icon{
+margin-top:5%;
+margin-left:10px;
+}
+h2{
+    margin-top:5px;
+}
+h4{
+display:flex;
+flex-direction:row;
+}
+h4:before,
+ h4:after{
+ content:"";
+ flex:1 1;
+ border-bottom:2px solid black;
+ margin:auto;
+}
+p{
+margin-top:15%;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<img src="images/user.jpg" height="70" width="70">
+<div class="card">
+<center> <h2> LOGIN FORM</h2></center>
+<input type="text"  placeholder="Enter Email" id="name"><br>
+<input type="password"  placeholder="Enter Password" id="name"><br>
+<a href="C:\Users\Helennive\Documents\vs\webpage1.html"><input type="submit"  value="Login" id="button"> </a><br></br>
+<h4> OR </h4><br></br>
+<div class="icon"> 
+<button style="background-color:navy;color:white;border:none; border-radius:5px;padding:2px;"> <i class="fa-brands fa-facebook" ></i>Sign in with facebook</button>
+<button style="background-color:red;color:black;border:none;border-radius:5px;padding:2px;"><i class="fa-brands fa-google"></i>Sign in with google</button>
+<center><p style="font-size:20px;"> Don't have account? <span style= "color:yellow"><b>Signup Now<b> </p></center>
+</div>
+</div>
+</div>
+</body>
+</html>

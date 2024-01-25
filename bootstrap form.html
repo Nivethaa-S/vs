@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  align-item:center;
+  justify-content: center;
+  background-image: url(images/window.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login{
+  border:2px solid white;
+  margin:auto;
+  margin-top:50px;
+  width:550px;
+  height:700px;
+  padding:20px;
+  border-radius:12px;
+  color:white;
+}
+.btn{
+  font-size:22px;
+  margin-left:100px;
+  border:1px solid white;
+  margin-top:25px;
+  color:white;
+  background-color:orange;
+}
+.form-check-input{
+  margin-top:18px;
+}
+.form-check-label{
+  margin-top:15px;
+}
+.input{
+    width:508px;
+    padding:7px;
+    border-radius:7px;
+}
+</style>
+<body>
+  <div class="login">
+    <h3 class="text-center text-white"> Welcome to Bootstrap</h3>
+    <form>
+      <div class="form-group">
+      <label  class="form-label text-white" for="Username"> Username</label>
+      <input class="form-control" type="username">
+      <label class="form-label text-white"  for="email"> Email address</label>
+      <input class="form-control" type="email">
+      <label class="form-label text-white"for="ps"> Password</label>
+      <input class="form-control"type="text">
+      <label class="form-label text-white"for="cp">Confirm Password</label>
+      <input class="form-control"type="text">
+      <label class=" form-label text-white"> Country</label><br>
+      <select class="form-control" name="country">
+          <option>Banglore</option>
+          <option> Andhra pradesh</option>
+          <option> Karnataka</option>
+      </select><br>
+  <label class=text-white for="gender"> Gender</label>
+        <input type="radio" name="gender"> Male 
+        <input type="radio" name="gender">Female <br>
+        <input class="form-check-input" type="checkbox" id="check">
+      <label  class="form-check-label text-white " for="check"> Don't have an account Signup</label>
+       <input class="btn text-black table-success" type-="submit" value="SIGN IN"> 
+       <input class="btn text-black" type-="submit" value="CANCEL">   
+       </form>
+       </div>
+ </div>
+  </body>
+</html>

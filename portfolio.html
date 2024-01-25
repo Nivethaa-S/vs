@@ -1,0 +1,561 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <title>portfolio</title>
+    </head>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+       } 
+      nav{
+        width:100%;
+        position:sticky !important;
+        left:0;
+        top:0;
+        box-shadow:0px 5px 8px rgba(0,0,0,.5);
+        z-index:10;
+      }
+      .navbar-brand{
+        font-weight: 800;
+
+      }
+      .nav-link{
+        margin:10px;
+        color:yellow !important;
+        border-bottom:1px solid transparent;
+        font-weight: bold;
+        font-size:20px;
+      }
+      .nav-link:hover{
+        border-bottom: 1px solid white;
+       }
+      section{
+        width:100%;
+        min-height:100vh;
+      }
+      #home{
+        width:100%;
+        height:100vh;
+        background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.6)),url(images/study.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        color:white;
+        flex-direction: column;
+      }
+      #home p{
+        position:absolute;
+        top:50%;
+        font-size: 100px;
+        opacity:0;
+        animation:text 3s ease-in-out;
+      }
+      #home p:nth-child(1){
+        animation-delay:0s
+      }
+        #home p:nth-child(2){
+        animation-delay:3s
+    }
+    #home p:nth-child(3){
+        animation-delay:6s
+    }
+        #home p:nth-child(4){
+        animation-delay:9s
+        }
+      @keyframes text{
+        50%{
+          opacity:1;
+        }
+        100%{
+          opacity:0;
+        } 
+      }
+      #home span{
+        color:yellow;
+      }
+      @media screen and (max-width:576px){
+        #home p{
+          font-size:80px;
+        }
+      }
+      /* About section */
+      #about{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background:#ff75a0;
+        }
+        .circle{
+          width:450px;
+          height:450px;
+          border-radius:50%;
+          background:#e93b81;
+          position: relative;
+          box-shadow: 0px 5px 12px rgba(0,0,0,.7);
+          margin-bottom:3%;
+          margin-top:3%;
+          transition: 1s;
+
+        }
+        .circle img{
+          position: absolute;
+          height:350px;
+          margin-top:30px;
+          margin-left:110px;
+          border-radius:50px;
+          filter: drop-shadow (0px 30px 15px rgba(0,0,0,.4));
+          transition: 1s;
+        }
+        .circle:hover{
+           width:700px;
+           height:400px;
+           border-radius:10px;
+           transition:1s;
+        }
+        .circle:hover img{
+                 position: absolute;
+                 top:0%;
+                 left:0%;
+                 transition:1s
+        }
+        .circle .content{
+          opacity:0;
+        }
+        .circle:hover .content{
+          position:absolute;
+          top:15%;
+          right:0;
+          width:50%;
+          color:white;
+          opacity:1;
+          transition: 1s;
+        }
+        @media screen and (max-width:576px){
+         .circle{
+          width:400px;
+          height:400px;
+          border-radius:50%;
+          background:#e93b81;
+          position: relative;
+          box-shadow: 0px 5px 12px rgba(0,0,0,.7);
+          margin-bottom:3%;
+          margin-top:8%;
+          transition: 1s;
+
+         }
+         .circle:hover img{
+                 position: absolute;
+                 top:0%;
+                 left:8%;
+                 transition:1s
+         }
+         .circle:hover{
+           width:400px;
+           height:600px;
+           border-radius:10px;
+           transition:1s;
+         }
+         .circle .content{
+          opacity:0;
+        }
+        .circle:hover .content{
+          position:absolute;
+          top:60%;
+          right:0;
+          width:100%;
+          color:white;
+          opacity:1;
+          transition: 1s;
+        }
+        }
+        /* skill section */
+        #skills{
+          padding-top:5%;
+          background:#e5e5e5;
+        }
+#skills .container{
+margin-top:6%;
+margin-bottom: 6%;
+}
+label{
+  color:red;
+  font-size: 20px;
+  font-weight: bold;
+}
+.progress{
+  height:30px;
+  box-shadow: 2px 4px 5px gray,-2px -2px 5px white;
+
+}
+.progress:hover{
+  box-shadow: 2px 4px 5px white,-2px -2px 5px gray;
+}
+.progress-bar{
+   color:yellow;
+   font-size:20px;
+}
+.card img{
+        height:200px;
+        transition:1s;
+    }
+    .inner{
+        overflow:hidden;
+    }
+    .card img:hover{
+      transform:scale(1.5);
+      transition: 1s;  
+    }
+    .card-body{
+        background-color:#e93b81;
+        color:white;
+        box-shadow:15px 20px 20px rgba(0,0,0,.3),
+                   inset 4px 4px 10px white;
+     }
+     .row{
+      margin-left: 30px;
+     }
+     .card-body1{
+      height:220px;
+      background-color:#e93b81;
+      color:white;
+      box-shadow:15px 20px 20px rgba(0,0,0,.3),
+                   inset 4px 4px 10px white;
+  
+     }
+     .card-title1 {
+      margin-top:2%;
+      margin-left:15px;
+     }
+     .card-text1 {
+      margin-left:15px;
+     }
+     /* portfolio */
+     .control ul li{
+      list-style:none;
+      background-color: black;
+      padding: 5px 15px;
+      color:white;
+      letter-spacing: 2px;
+      display: inline-block;
+      cursor:pointer;
+     }
+     .item{
+      position:relative;
+      box-shadow:15px 20px 20px rgba(0,0,0,.3),
+                   inset 4px 4px 10px white;
+     }
+     .item:hover{
+      -webkit-box-shadow:-18px 3px 109px -65px rgba(0,0,0,0.75);
+      -moz-box-shadow:-18px 3px 109px -65px rgba(0,0,0,0.75);
+      box-shadow:-18px 3px 109px -65px rgba(0,0,0,0.75);
+       transition: 0.5s;
+     }
+     .item span{
+          position:absolute;
+          top:40%;
+          left:45%;
+          font-size: 40px;
+          color:black;
+          cursor:pointer;
+          opacity: 0;
+     }
+     .item:hover span{
+      opacity:1;
+      transition: 0.5s;
+     }
+     .item:before{
+      content:"";
+      left:0%;
+      top:0%;
+      height:100%;
+      width:100%;
+      background-color: rgba(238,235,230,0.568);
+      opacity:0;
+      position:absolute;
+
+     }
+     .item:hover:before{
+         opacity:1;
+         transform: 0.3s;
+     }
+    
+     #container {
+      padding-top:7%;
+      background-color:#e93b81;
+     }
+     .row iframe{
+      box-shadow:15px 20px 10px rgba(0,0,0,.4);
+     }
+     .container h1{
+       font-size:50px;
+     }
+
+     
+    </style>
+    <body>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">PORTFOLIO LANDING PAGE</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarsupportedcontent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#service">Service</a>
+                  </li>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                  </li>
+                </li>
+                <a class="nav-link" href="#contact">Contact</a>
+                 </li>
+                </ul>
+               </div>
+            </div>
+          </nav>
+          <!--Home section-->
+         <section id ="home">
+           <p class="text-center"> I am   <span> Nivetha</span></p>
+           <p  class="text-center"> I am an<span> Engineer</span></p>
+           <p  class="text-center"> I am a<span> Developer</spaqn></p>
+           <p  class="text-center"> I am a<span>Designer </span></p>
+         </section>   
+          <!--About section-->
+          <section id="about">
+            <div class="circle">
+              <img src="images/stand.jpg">
+              <div class="content">
+                
+                <h1> ABOUT ME</h1>
+               <code style="color:white;font-size:17px;font-weight: bold;"> <code style="color:yellow;font-size:17px;font-weight: bold;"><p> I am WEB DEVELOPER</p></code>
+                <p>Name:NIVETHA</p>
+                <P>Qualification:B.E-EEE</P>
+                <p>DOB:24.10.1998</p>  
+                <p> Address:7/30,sandapet,kallakurichi</p>
+                <p>Email:helennive18@gmail.com</p>
+                <p>phone:7603941985</p></code>
+              </div>
+            </div>
+          </section>
+          <section id="skills">
+            <h1 class="text-center"> MY SKILLS</h1>
+            <div class="container">
+              <div class="row p-lg-3 p-0 mb-lg-3 mb-0">
+                <div class="col-lg-6 col-12 pt-lg-0 pt-3">
+                  <label>HTML</label>
+                  <div class="progress">
+                    <div class="progress-bar" style="width:90%"> 90%</div>
+                  </div>
+              </div>
+
+                <div class="col-lg-6 col-12 pt-lg-0 pt-3">
+                <label> CSS</label>
+                <div class="progress">
+                  <div class="progress-bar" style="width:85%"> 90%</div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row p-lg-3 p-0 mb-lg-3 mb-0">
+                <div class="col-lg-6 col-12 pt-lg-0 pt-3">
+                  <label>Java Script</label>
+                  <div class="progress">
+                    <div class="progress-bar" style="width:80%"> 85%</div>
+                  </div>
+              </div>
+
+                <div class="col-lg-6 col-12 pt-lg-0 pt-3">
+                <label> BOOTSTRAP</label>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width:85%">85%
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row p-lg-3 p-0 mb-lg-3 mb-0">
+                <div class="col-lg-6 col-12 pt-lg-0 pt-3">
+                  <label>Adobe XD</label>
+                  <div class="progress">
+                    <div class="progress-bar" style="width:70%"> 70%</div>
+                  </div>
+              </div>
+
+                <div class="col-lg-6 col-12 pt-lg-0 pt-3">
+                <label> MY SQL</label>
+                <div class="progress">
+                  <div class="progress-bar" style="width:60%">60%</div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
+          <section id ="service">
+            <div class="row">
+                <h1 class="text-center">  SERVICES THAT I PROVIDE</h1>
+                <div class="col-md-4 my-5">
+                    <div class="card shadow">
+                        <div class="inner">
+                            <img src="images/do.jpg" class="card-img-top"> 
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title"> HTML</h4>
+                            <div class="card-text"> <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the meaning and structure of web content.</p> 
+                          <a href="#" type="button" class="btn btn-success"> Learn More</a>
+        
+                        </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                    <div class="col-md-4 my-5 ">
+                        <div class="card shadow">
+                            <div class="inner">
+                                <img src="images/welcome.jpg" class="card-img-top "> 
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title"> CSS Animation</h4>
+                                <div class="card-text"> <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the meaning and structure of web content.</p> 
+                                  <a href="#" type="button" class="btn btn-success"> Learn More</a>
+            
+                            </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                        <div class="col-md-4 my-5">
+                            <div class="card shadow">
+                                <div class="inner">
+                                    <img src="images/cat.jpg" class="card-img-top ">  
+                                </div>
+                                <div class="card-body1">
+                                    <h4 class="card-title1"> Bootstrap</h4>
+                                    <div class="card-text1"> <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the meaning and structure of web content.</p> 
+                                      <a href="#" type="button" class="btn btn-success"> Learn More</a>
+                
+                                    </p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </section>
+                <section class="portfolio">
+                  <div class="container  text-center py-1">
+                    <h1 class="text-center pb-5"> PORTFOLIO</h1>
+                    <div class="control">
+                      <ul>
+                        <li class="button" data-filter="All"> All</li>
+                        <li class="button" data-filter="Brand"> Brand</li>
+                        <li class="button" data-filter="Design"> Desgin</li>
+                        <li class="button" data-filter="Graphic"> Graphic</li>
+                        </ul>
+                    </div>
+                    <div class="row pt-3">
+                      <div class="col-lg-4">
+                        <div class="item">
+                         <img src="images/java.jpg" class="img-fluid filter Brand Design Graphic">
+                         <span><i class="fa-solid fa-plus" data-toggle="modal" data-target="#portfoliomodal"></i></span>
+                      </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="item">
+                         <img src="images/social.jpg" class="img-fluid filter Brand Graphic">
+                         <span><i class="fa-solid fa-plus"data-toggle="modal" data-target="#portfoliomodal"></i></span>
+                      </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                        <div class="item">
+                         <img src="images/phone.jpg" class="img-fluid filter Brand">
+                         <span><i class="fa-solid fa-plus"data-toggle="modal" data-target="#portfoliomodal"></i></span>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div class="row pt-3">
+                      <div class="col-lg-4">
+                        <div class="item">
+                         <img src="images/connect.jpg" class="img-fluid filter Design">
+                         <span><i class="fa-solid fa-plus"data-toggle="modal" data-target="#portfoliomodal"></i></span>
+                      </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="item">
+                         <img src="images/diamond.jpg" class="img-fluid filter">
+                         <span><i class="fa-solid fa-plus"data-toggle="modal" data-target="#portfoliomodal"></i></span>
+                      </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                        <div class="item">
+                         <img src="images/face.jpg" class="img-fluid">
+                         <span><i class="fa-solid fa-plus"data-toggle="modal" data-target="#portfoliomodal"></i></span>
+                      </div>
+                      </div>
+                     </div>
+                  </div>
+                </div>
+                </section>
+                <div class="portfolio-modal modal fade mt-5" id="portfoliomodal" aria-hidden="true" role="dialog">
+                  <div class="modal-dialog modal-md" role="document">
+                    <div class="modal-content text-center">
+                      <div class="modal-body text-center">
+                        <div class="container-fluid py-3">
+                          <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                              <img src="images/soft.jpg" class="img-fluid rounded" alt="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <section class="contact">
+                  <div class="container mb-5 py-5">
+                    <h1 class="text-center"> GET IN TOUCH</h1>
+                     <div class="row">
+                       <div class="col-lg-7 col-12 my-5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248755.79476123664!2d80.04419820491857!3d13.047807812505333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1702130175315!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                         </div>
+                          <div class="col-lg-5 col-12 my-5">
+                     <form>
+                      <div class="mb-3">
+                        <label class="form-label"> Email Address</label>
+                        <input type="text" class="form-control">
+                         </div>
+                          <div class="mb-3">
+                        <label class="form-label"> Username</label>
+                        <input type="email" class="form-control">
+                          </div>
+                      <div class="mb-3"> 
+                        <label class="form-label"> Enter Your Message</label>
+                        <textarea class="form-control" rows="8"></textarea>
+                      </div>
+                      <button class="btn btn-primary"> Send a Message</button>
+                    </form>
+                    </div>
+                    </div>
+                  </div>
+                </section>
+        
+    </body>
+    </html> 

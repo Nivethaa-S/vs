@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website </title>
+    <link rel="stylesheet" href="Portfolio.css">
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">   -->
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+      <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;
+}
+:root{
+    --text-color:#f5f5f5;
+    --hover-color:#12f7ff;
+    --bg-color:#250821;
+    --secon-bg-color:#292e33;
+    --big-font:2.5rem;
+    --norma-font:2rem;
+    --neon-box-shadow:0 0 .5rem;
+    --h2-font:3rem;
+    --font-neon-text-shadow:0 0 10px rgba(18,247,255,0.3),
+    0 0 20px rgba(18,247,255,0.3),
+    0 0 30px rgba(18,247,255,0.3),
+    0 0 40px rgba(18,247,255,0.3),
+    0 0 70px rgba(18,247,255,0.3),
+    0 0 80px rgba(18,247,255,0.3),
+    0 0 100px rgba(18,247,255,0.3),
+    0 0 150px rgba(18,247,255,0.3);
+}
+::-webkit-scrollbar{
+     height: 0;
+     width: .5rem; 
+}
+::-webkit-scrollbar-track{
+    background: var(--secon-bg-color);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color);
+     border-radius: 5rem; 
+    }
+
+html{
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    font-family:"poppins",sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+h1{
+    font-size: 60px;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.1rem;
+}
+h5{
+    font-size: .95rem;
+}
+h1,h2,h3,h4,h5{
+    color: var(--text-color);
+    line-height: 1.1;
+}
+a{
+    color: var(--text-color);
+    transition: var(--transition);
+}
+section{
+    padding: 8rem 0;
+}
+section>h2{
+    text-align: center;
+}
+section>p{
+    text-align: center;
+    width: 40%;
+    margin: .5rem auto 4rem;
+}
+p{
+    font-size: 19px;
+    line-height: 150%;
+}
+span{
+    color: var(--hover-color);
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 16px 32px;
+    border: 2px solid transparent;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    background: var(--hover-color);
+    color: var(--text-color);
+    font-size: 19px;
+    transition: var(--transition);
+}
+.btn:hover{
+     background:transparent;
+    border-color: var(--text-color);
+    transform: translateY(-.5rem); 
+
+}
+
+.container{
+    max-width: 1420px;
+    width: 90%;
+    margin: 0 auto;
+} 
+ 
+/*............................ Start NavBar......................... */
+
+  nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.nav-container header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10%;
+} 
+ /* .nav-container ,header.sticky{
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--secon-bg-color);
+    padding: 12px 10%;
+}   */
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-icon{
+    display: none;
+}
+.logo {
+     color: var(--text-color); 
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.navlinks{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.navlinks li a{
+    color: var(--text-color);
+    font-size: 18px;
+    transition: var(--transition);
+    display: inline-block;
+}
+.navlinks li a:hover{
+    color: var(--hover-color);
+    text-shadow: 0 0 10px rgba(18,247,255,0.6),
+    0 0 20px rgba(18,247,255,0.6),
+    0 0 30px rgba(18,247,255,0.6),
+    0 0 40px rgba(18,247,255,0.6),
+    0 0 70px rgba(18,247,255,0.6),
+    0 0 80px rgba(18,247,255,0.6),
+    0 0 100px rgba(18,247,255,0.6),
+    0 0 150px rgba(18,247,255,0.6);
+} 
+.navlinks a.active{
+    color: var(--hover-color);
+}   
+/*............................ End NavBar......................... */
+/* ............................Start Header........................ */
+header{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+}
+.header-container{
+    display: grid;
+    grid-template-columns: auto 450px;
+    align-items: center;
+    height: 100%;
+    padding-top: 2.5rem;
+    gap: 2%;
+    position: relative;
+}
+ .header-container::after{
+    content: '';
+    width: 1000%;
+    right: -981%;
+    position: absolute;
+    background: var(--bg-color);
+    height: 100%;
+    z-index: -1;
+}
+.header-left h2{
+    margin: 1rem 0;
+}
+.typed-text{
+    background: var(--hover-color);
+    border-bottom: 4px solid var(--text-color);
+}
+.header-left p{
+    font-size: 19px;
+    width: 94%;
+    margin: .5rem 0 2rem;
+} 
+
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 4em;
+}
+.home-content{
+    min-width: 600px;
+}
+.home-content h1{
+    font-size: var(--big-font);
+    font-weight: 700;
+
+}
+.change-text{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.change-text h3 .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+.change-text h3 .word .letter{
+    transform-origin: center center 25px;
+}
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+.change-text h3 .word .letter.in{
+    transform-origin: center center 25px;
+}
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+.change-text h3 .word .letter.in{
+    transition: 0.38s ease;
+}
+.change-text h3 .word .letter.behind{
+    transform: rotateX(-90deg);
+}
+.home-content p{
+    color: #bdbdbd;
+    line-height: 1.6;
+}
+.info-box{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 1rem 0 2rem;
+}
+.info-box h5{
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+.info-box span{
+    font-size: .9rem;
+    color: #bdbdbd;
+     padding: 10px; 
+}
+.btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 45px;
+}
+.btn-box .btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 10px;
+    height: 100%;
+    background: var(--hover-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    box-shadow: var(--neon-box-shadow);
+    border-radius: 5px;
+    position: relative;overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--hover-color);
+}
+.btn:hover{
+    color: var(--hover-color);
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+.btn:hover::before{
+    width: 100%;
+}
+.btn:nth-child(2){
+    background: var(--bg-color);
+    color: var(--hover-color);
+}
+.btn:nth-child(2):hover{
+    color: var(--bg-color);
+}
+.btn:nth-child(2)::before{
+    background: var(--hover-color);
+}
+.Social-icons{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    height: 40px;
+}
+.Social-icons a{
+    display: inline-flex;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    transition: .6s;
+    box-shadow: 0 0 0.3rem #12f7ff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.Social-icons a i{
+    font-size: 1.5rem;
+}
+.Social-icons a:hover{
+    color: var(--bg-color);
+}
+.Social-icons a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:0;
+    height: 100%;
+    background: var(--hover-color);
+    transition: .6s;
+    z-index: -1;
+}
+.Social-icons a:hover::before{
+    width: 100%;
+}
+.home-image{
+    position: relative;
+}
+.img-box{
+    text-align: center;
+}
+.img-box img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    height: auto;
+}
+.liquid-shape{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   top: -15%;    
+}
+.liquid-shape:nth-child(2){
+    filter: blur(50px);
+}
+.header-right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 450px;
+}
+.herione-image{
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    background: var(--text-color);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+}
+.herione-image img{
+    position: relative;
+    top: .5rem;
+}
+.round{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-color: var(--text-color) transparent;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 4px 4px 0 0;
+    animation: RoundAni infinite linear 10s;
+}
+@keyframes RoundAni{
+    to{
+        transform:rotate(360deg)
+    }
+}
+.moon{
+    width: 2rem;
+    height: 2rem;
+    background: var(--text-color);
+    border-radius: 50%;
+    position: absolute;
+    right: 60px;
+    top: 40px;
+    box-shadow: 0 0 1rem var(--hover-color);
+} 
+/* ............................End  About............................. */
+#About{
+background: var(--secon-bg-color);
+padding: 80px 0;
+color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--text-color);
+    
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+} 
+
+/* ............................Start  Skills............................. */
+ .skills{
+    background: var(--bg-color);
+}
+h2{
+    text-align: center;
+    padding: 10px;
+    color: var(--hover-color);
+    margin-bottom: 20px;
+}
+
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+}
+.skill-bar{
+    margin-bottom: 2.3rem;
+   
+}
+.skill-main h3{
+    margin-bottom: 2rem;
+    font-size: var(--norma-font);
+    text-align: center;
+}
+.skill-left .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.skill-left .skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.skill-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: var(--hover-color);
+    border-radius: 25px;
+    box-sizing: var(--neon-box-shadow);
+}
+.skill-bar .bar .html{
+    width: 82%;
+    animation: html 2s;
+}
+.skill-bar .bar .css{
+    width: 88%;
+    animation: css 3s;
+}
+.skill-bar .bar .javascript{
+    width: 72%;
+    animation: javascript 4s;
+}
+.skill-bar .bar .bootstrap{
+    width: 90%;
+    animation: bootstrap 5s;
+}
+.skill-bar .bar .reactjs{
+    width: 72%;
+    animation: reactjs 6s;
+}
+.skill-bar .bar .python{
+    width: 72%;
+    animation: python 7s;
+}
+.skill-bar .bar .mangodb{
+    width: 75%;
+    animation: mangodb 8s;
+}
+                   /* skill right */
+ .professional{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}                   
+.box{
+    position: relative;
+    margin: 10px 0;
+    flex: 1 1 15rem;
+}
+.box .text{
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+.box .text big{
+    font: 400;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box .text small{
+    display: block;
+    font-weight: 600;
+        
+}
+.circle{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle .points{
+    width: 2px;
+    height: 10px;
+    background-color: var(--bg-color);
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+ 
+}
+.points.marked{
+    animation: glow 0.04s linear forwards;
+    animation-delay: calc(var(--i)*0.05s);
+
+}
+
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 82%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 88%;
+    }
+}
+
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 72%;
+    }
+}
+@keyframes bootstrap{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes reactjs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 72%;
+    }
+}
+@keyframes python{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 72%;
+    }
+}
+@keyframes mangodb{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+}
+
+@keyframes glow{
+    0%{
+        background: var(--bg-color);
+        box-shadow: none;
+    }
+    100%{
+        background: var(--hover-color);
+        box-shadow: var(--neon-box-shadow);
+    }
+}  
+
+/* ........................Start Portfolio............................... */
+  .fillter-buttons{
+    margin: 2rem;
+    text-align: center;
+}
+.portfolio{
+    background: var(--secon-bg-color);
+}
+.fillter-buttons .btn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1.3rem;
+    color: var(--text-color);
+}
+.main-text span{
+    color: var(--text-color);
+    margin-left:660px;
+}
+.fillter-buttons .btn:hover{
+    color: var(--hover-color);
+}
+.portfolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(320px, 2fr));
+    gap: 2rem;
+}
+.port-box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #292e33;
+    display: flex;
+    grid-template-rows: 2fr auto;
+    align-items: center;
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+.port-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.port-image img{
+    width: 100%;
+    opacity: .5s;
+    height: 100%;
+    transition: .5s;
+}
+.port-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    background: linear-gradient(rgba(0,0,0,.2),#12f7ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.5s;
+    padding: 0 2rem;
+}
+.port-box:hover .port-content{
+    opacity: 1;
+}
+.port-box:hover .port-image img{
+    transform: scale(1.1);
+}
+.port-content h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.port-content p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+}
+.port-content a{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--hover-color);
+    outline: 2px solid #fff;
+}
+.port-content a i{
+    font-size: 1.3rem;
+    color: var(--secon-bg-color);
+} 
+
+
+/* ...................................Start Contact.................................... */
+ .contant{
+    background: var(--bg-color);
+    width: 100%;
+}
+.main-text span{
+    margin-left: 680px;
+}
+.contant form{
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+.contant form input,
+.contant form textarea{
+    width: 100%;
+    color: var(--text-color);
+    background: var(--secon-bg-color);
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+    padding: .7rem;
+}
+.contant form textarea{
+    resize: none;
+}
+.formBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.formBtn .btn{
+    cursor: pointer;
+    font-size: 1rem;
+} 
+
+/* ...............................Start Footer............................... */
+ footer{
+    padding: 1.5rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer p{
+    color: #bdbdbd;
+    margin-left: 280px;
+}
+footer a{
+    display: inline-flex;
+    justify-content: center;
+    color: var(--text-color);
+    background: var(--hover-color);
+    padding: .6rem;
+    border-radius: 5px;
+}
+footer a i{
+    font-size: 1rem;
+    color: var(--secon-bg-color);
+} 
+
+/* ..............................Break points............................. */
+ @media(max-width:991px){
+    header,
+    header.sticky{
+        padding: 15px 5%;
+    }
+    footer{
+        padding: 15px 5%;
+    }
+    section{
+        padding: 50px 5%;
+    }
+    .navlinks a{
+        padding: 8px 15px;
+    }
+    :root{
+    --big-font:2.2rem;
+    --norma-font:1.8rem;
+    --neon-box-shadow:0 0 .8rem #12f7ff;
+    --h2-font:3rem;
+    }
+    .home-content{
+        margin-top: 5rem;
+    }
+    .Social-icons{
+        margin-top: 2rem;
+    }
+} 
+     
+
+  @media(max-width:768px) {
+      #menu-icon{
+        display: block;
+        transition: all .4s ease;
+    }
+    #menu-icon.bx-x{
+        transform: rotate(-180deg);
+    }
+    .navlinks{
+        display: flex;
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        padding: 0 5%;
+        transition: all .45s ease;
+    }
+    .navlinks a{
+        display: block;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+    .navlinks.open{
+        top: 100%;
+    }  
+    .home{
+        grid-template-columns: 1fr;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+    }
+    .skill-main{
+        grid-template-columns: 1fr;
+    }
+    .fillter-buttons{
+        margin: 2.5rem 0;
+    }
+    footer p{
+        font-size: .8rem;
+    }
+    .contant span{
+        font-size: 2rem;
+    }
+    .portfolio span{
+        font-size: 2rem;
+    }
+}   
+
+@media(max-width:420px){
+    html{
+        font-size: 80%;
+    }
+    footer p{
+        font-size: .6rem;
+    }
+    .fillter-buttons .btn{
+        font-size: .8rem;
+    }
+    .img-about img{
+        width: 300px;
+    }
+    .info-about1,.info-about2,.info-about3{
+        display: none;
+    }
+    .img-about p{
+        font-size: 1rem;
+    }
+    .contant span{
+        font-size:2rem;
+    }
+}
+ </style>
+</head>
+<body>
+    <!-- ......................Start Nav Bar............................. -->
+    <!-- <header>
+        <div class="logo"><span>P</span>riya</div>
+        <ul class="navlist">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Service">Service</a></li>
+        </ul>
+        <div class="menu-icon" class="bx bx-menu"></div>
+    </header> -->
+     <nav>
+        <div class="container nav-container">
+            <a href="" class="logo"><span>P</span>riya</a>
+            <ul class="navlist">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Service">Service</a></li>
+            </ul>
+            <div class="menu-icon" class="bx bx-menu"></div>
+        </header> -->
+         <nav>
+            <div class="container nav-container">
+                <a href="" class="logo"><span>P</span>riya</a>
+                <ul class="navlinks">
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#About"> About </a></li>
+                    <li><a href="#Skills"> Skills </a></li>
+                    <li><a href="#Portfolio"> Portfolio </a></li>
+                    <li><a href="#Contact"> Contact </a></li>
+                </ul>
+                <div class="menu-icon" class="bx bx-menu"></div>
+            </div>
+        </nav> 
+        <!-- ......................End Nav Bar............................. -->
+    
+        <!-- ......................Start Header............................. -->
+    
+         <header>
+            <div class="container header-container">
+                <section id="home" class="home">
+                    <div class="home-content">
+                        <h1>Hi! I'm Priya</h1>
+                        <div class="change-text">
+                            <h3>And I'm</h3>
+                            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website </title>
+    <link rel="stylesheet" href="Portfolio.css">
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">   -->
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ......................Start Nav Bar............................. -->
+    <!-- <header>
+        <div class="logo"><span>P</span>riya</div>
+        <ul class="navlist">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Service">Service</a></li>
+        </ul>
+        <div class="menu-icon" class="bx bx-menu"></div>
+    </header> -->
+     <nav>
+        <div class="container nav-container">
+            <a href="" class="logo"><span>P</span>riya</a>
+            <ul class="navlinks">
+                <li><a href="#"> Home </a></li>
+                <li><a href="#About"> About </a></li>
+                <li><a href="#Skills"> Skills </a></li>
+                <li><a href="#Portfolio"> Portfolio </a></li>
+                <li><a href="#Contact"> Contact </a></li>
+            </ul>
+            <div class="menu-icon" class="bx bx-menu"></div>
+        </div>
+    </nav> 
+    <!-- ......................End Nav Bar............................. -->
+
+    <!-- ......................Start Header............................. -->
+
+     <header>
+        <div class="container header-container">
+            <section id="home" class="home">
+                <div class="home-content">
+                    <h1>Hi! I'm Priya</h1>
+                    <div class="change-text">
+                        <h3>And I'm</h3>
+                        <h3>
+                            <span class="word">Web&nbsp;Designer</span>
+                            <span class="word">Frontend&nbsp;Developer</span>
+                            <span class="word">Graphic&nbsp;Designer</span>
+                        </h3>
+                    </div>
+
+                    <p>
+                        I am Priya a 22 years old who has a strong passion and interest in web development and I learned
+                        many things in front-end.
+                    </p>
+                    <div class="info-box">
+                        <div class="email-info">
+                            <h5>Email :</h5>
+                            <span>Priyarhea32@gmail.com</span>
+                        </div>
+                        <div class="Github-info">
+                            <h5>Github :</h5>
+                            <span>https://github.com/PriyaRhea</span>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <a href="./Priya Resume. (1).pdf" class="btn">Download CV</a>
+                        <a href="mailto:" class="btn">Hire Me Now!</a>
+                    </div>
+                    <div class="Social-icons">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                         <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="https://github.com/PriyaRhea"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </section>
+    
+                <div class="header-right">
+                    <div class="herione-image">
+                        <img src="./Img2.jpg" alt="img">
+                    </div>
+                    <div class="round">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+        </header>
+        <!--....................... End Home............................. -->
+        <!--....................... Start About............................. -->
+         <div id="About">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./Img2.jpg" alt="image">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            Passionate and dedicated frontend developer with a strong foundation in Html5, Css3, JavaScript
+                            and React.js.
+                            Recent graduate with a flair for creating visually appealing and user friendly web designs.
+                            Eager to apply classroom
+                            knowledge and contribute to dynamic projects. Quick learner and effective communicator, excited
+                            to collaborate with teams to bring innovative ideas to life.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('experince')">Experince</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="experince">
+                            <ul>
+                                <li><span>2022 - 2023</span><br>Process Associate<br>Source Hov India Pvt. Ltd Chennai.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br><li>Python Full Stack Developer</li>Login 360 Institute in Chennai.</li>
+                                <li><span>2018 - 2021</span><br><li>B.Com(Corporate Secretaryship)</li>Dr.MGR Janaki college of Art's and science for womens in
+                                    Chennai.</li>
+                                <li><span>2016 - 2018</span><br><li>Accounting</li>C.S.I.Monahan Girls.Hr.Sec.School in Chennai.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    
+    
+        <!--...................... End About............................. -->
+    
+        <!-- ......................Start Skills.............................. -->
+        <section id="Skills" class="skills">
+            <div class="main-text">
+                <h2>TECHNICAL AND PROFESSIONAL</h2>
+                <h2>My Skills</h2>
+            </div>
+            <div class="skill-main">
+                <div class="skill-left">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>HTML5</p>
+                            <P>82%</P>
+                        </div>
+                        <div class="bar">
+                            <span class="html"></span>
+                        </div>
+                    </div>
+    
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>CSS3</p>
+                            <P>88%</P>
+                        </div>
+                        <div class="bar">
+                            <span class="css"></span>
+                        </div>
+                    </div>
+    
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>JAVASCRIPT</p>
+                            <P>72%</P>
+                        </div>
+                        <div class="bar">
+                            <span class="javascript"></span>
+                        </div>
+                    </div>
+    
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>BOOTSTRAP</p>
+                            <P>90%</P>
+                        </div>
+                        <div class="bar">
+                            <span class="bootstrap"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>REACT.JS</p>
+                            <P>72%</P>
+                        </div>
+                        <div class="bar">
+                            <span class="reactjs"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>PYTHON</p>
+                            <P>72%</P>
+                        </div>
+                        <div class="bar">
+                            <span class="python"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>MANGO DB</p>
+                            <P>75%</P>
+                        </div>
+                        <div class="bar">
+                            <span class="mangodb"></span>
+                        </div>
+                    </div>
+    
+    
+                </div>
+                <div class="skill-right">
+                    <h3>Professional Skills</h3>
+                    <div class="professional">
+                        <div class="box">
+                            <div class="circle" data-dots="80" data-percent="90"></div>
+                            <div class="text">
+                                <big>90%</big>
+                                <small>Team Work</small>
+                            </div>
+                        </div>
+    
+                        <div class="box">
+                            <div class="circle" data-dots="80" data-percent="80"></div>
+                            <div class="text">
+                                <big>80%</big>
+                                <small>Creativity</small>
+                            </div>
+                        </div>
+    
+                        <div class="box">
+                            <div class="circle" data-dots="80" data-percent="55"></div>
+                            <div class="text">
+                                <big>55%</big>
+                                <small>Project Management</small>
+                            </div>
+                        </div>
+    
+                        <div class="box">
+                            <div class="circle" data-dots="80" data-percent="70"></div>
+                            <div class="text">
+                                <big>70%</big>
+                                <small>Comiunication</small>
+                            </div>
+                        </div>
+                    </div>
+        </section> 
+        <!-- ......................End Skills.............................. -->
+    
+        <!-- ......................Start Portfolio.............................. -->
+         <section id="Portfolio" class="portfolio">
+            <div class="main-text">
+                <span>What i will do for you</span>
+                <h2>Latest Project</h2>
+            </div>
+
+            <div class="container">
+                <div class="fillter-buttons">
+                    <button class="btn" data-filter="all">All</button>
+                    <button class="btn" data-filter=".product">Product</button>
+                    <button class="btn" data-filter=".inter">Interacting</button>
+                    <button class="btn" data-filter=".web">Web App</button>
+                </div>
+    
+                <div class="portfolio-gallery">
+                    <div class="port-box mix product">
+                        <div class="port-image">
+                            <img src="https://img.freepik.com/premium-photo/flying-pieces-sushi-with-wooden-chopsticks-sauce_120962-1511.jpg?size=626&ext=jpg&ga=GA1.2.1668296813.1684916617&semt=ais"
+                                alt="Sushi img">
+                        </div>
+                        <div class="port-content">
+                            <h3>Sushi Restaurants web page</h3>
+                            <p>Stylish Sushi Restaurants Web Page Desinged by Html5, Css3, Javascript</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="port-box mix product">
+                        <div class="port-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSLmbf23RjDaOMPk2OB3FCHXP94JdFNV8tmxF2yjgK6p0IzJlrSVueOhkHRcBP_N57Rys&usqp=CAU"
+                                alt="BMI img">
+                        </div>
+                        <div class="port-content">
+                            <h3>BMI Calculator</h3>
+                            <p>BMI Calculator Desinged by Html5, Css3, Javascript</p>
+                            <a href="https://github.com/PriyaRhea/BMI-Calculator2"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="port-box mix inter">
+                        <div class="port-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5-CsXZjdqGaFSvj0rZ_ulkS1hQhWyP6l4RSUWULB98vpgaZ9Lh5yPoSo0xSkFBdliIk&usqp=CAU"
+                                alt="Web design img">
+                        </div>
+                        <div class="port-content">
+                            <h3>Web Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex quo, natus aperiam
+                                soluta dignissimos officiis, impedit porro, vero eveniet eos provident doloremque
+                                asperiore</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+    
+                    <div class="port-box mix web">
+                        <div class="port-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNxLaNsoyJh57ane6zR6rlCg5q9Q8zzkwQ_2m7SDXpu266TPW6OcTBJxvp-n9NVUJKaZ0&usqp=CAU"
+                                alt="Web design img">
+                        </div>
+                        <div class="port-content">
+                            <h3>Web Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex quo, natus aperiam
+                                soluta dignissimos officiis, impedit porro, vero eveniet eos provident
+                                doloremque asperiore</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                    <div class="port-box mix web">
+                        <div class="port-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNxLaNsoyJh57ane6zR6rlCg5q9Q8zzkwQ_2m7SDXpu266TPW6OcTBJxvp-n9NVUJKaZ0&usqp=CAU"
+                                alt="Web design img">
+                        </div>
+                        <div class="port-content">
+                            <h3>Web Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex quo, natus aperiam
+                                soluta dignissimos officiis, impedit porro, vero eveniet eos provident
+                                doloremque asperiore</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- ......................End Portfolio.............................. -->
+    
+         <!-- ......................Start Contact.............................. -->
+         <section id="Contact" class="contant">
+            <div class="main-text">
+                <span>ASK ME QUESTION</span>
+                <h2>Contact Me</h2>
+            </div>
+            <form action="Priyarhea32@gmail.com">
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <input type="text" placeholder="Your Address">
+                <input type="number" placeholder="Phone Number">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <div class="btn-box formBtn">
+                    <button type="submit" class="btn">Send Message</button>
+                </div>
+            </form>
+         </section> 
+          <!-- ......................End Contact.............................. -->
+    
+          <!-- .......................Start Footer............................. -->
+          <footer>
+            <p>Copyright @copy; 2023 by PriyaCoder || All Right Reserved.</p>
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+          </footer>  
+          <!-- ........................End Footer............................... -->
+        <script src="mixitup.min.js"></script>
+        <script src="./Portfolio.js"></script>
+    </body>
+    </html>            
+    

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Your Name: <input type="text" id="jesus" onchange="UpperCase()">
+    <script>
+        function UpperCase() {
+            const x=document.getElementById("jesus");
+            x.value=x.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onmouseover="mOver(this)"
+    onmouseout="mOut(this)"
+    style="background-color:yellow;width:120px;height:20px;padding:40px;">
+mouse over me </div>
+<script>
+    function mOver(obj) {
+        obj.innerHTML="thank you"
+    }
+    function mOut(obj) {
+        obj.innerHTML="Mouse over me"
+    }
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onmousedown="mDown(this)"
+    onmouseUp="mUp(this)"
+    style="background-color:red;width:90px;height:20px;padding:40px;">click me </div>
+<script>
+    function mDown(obj) {
+        obj.style.background="#1ec5e5";
+        obj.innerHTML = "Release me"
+    }
+    function mUp(obj) {
+        obj.style.background="#d94a38";
+        obj.innerHTML="thank you"
+    }
+</script>
+</body>
+</html>
